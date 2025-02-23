@@ -33,3 +33,11 @@ knitr::opts_chunk$set(include = params$solutions)
    ```
 
 2. This is question 2.
+
+`r if (params$solutions) "<details>"`
+`r if (params$solutions) "<summary>Session info</summary>"`
+```{r}
+quarto::quarto_version()
+sessioninfo::session_info()
+```
+`r if (params$solutions) "</details>"`
