@@ -37,6 +37,8 @@ knitr::opts_chunk$set(include = params$solutions)
 `r if (params$solutions) "<details>"`
 `r if (params$solutions) "<summary>Session info</summary>"`
 ```{r}
+#| warning: false
+#| message: false
 quarto::quarto_version()
 sessioninfo::session_info()
 ```
