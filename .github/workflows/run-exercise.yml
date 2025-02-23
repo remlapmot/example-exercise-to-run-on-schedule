@@ -48,9 +48,9 @@ jobs:
       - name: Render practical and commit output documents into repo
         run: |
           # Render questions
-          Rscript -e \"quarto::quarto_render("exercise-01.qmd", output_file = "exerise-01-questions-${{ matrix.config.os }}.html", execute_params = list(solutions = FALSE, title = "Example exercise: Questions"))\"
+          Rscript -e "quarto::quarto_render('exercise-01.qmd', output_file = \"exercise-01-questions-${{ matrix.config.os }}.html\", execute_params = list(solutions = FALSE, title = \"Example exercise: Questions\"))"
           # Render solutions
-          Rscript -e \"quarto::quarto_render("exercise-01.qmd", output_file = "exerise-01-solutions-${{ matrix.config.os }}.html")\"
+          Rscript -e "quarto::quarto_render("exercise-01.qmd", output_file = \"exercise-01-solutions-${{ matrix.config.os }}.html\")"
           # Commit output documents
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
