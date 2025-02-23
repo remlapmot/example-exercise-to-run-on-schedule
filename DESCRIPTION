@@ -8,5 +8,6 @@ Depends:
     R (>= 3.5.0)
 Imports:
     knitr,
-    quarto
+    quarto,
+    sessioninfo
 Encoding: UTF-8
