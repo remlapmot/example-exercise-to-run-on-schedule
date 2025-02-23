@@ -55,6 +55,7 @@ jobs:
           # Commit output documents
           git config --local user.name $GITHUB_ACTOR
           git config --local user.email $GITHUB_ACTOR@users.noreply.github.com
+          git pull
           git add "*.html"
           git commit * -m "Render practical on ${{ matrix.config.os }}" || echo 'No changes to commit'
           git push origin || echo 'No changes to commit'
