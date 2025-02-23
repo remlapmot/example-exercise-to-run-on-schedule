@@ -40,3 +40,18 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
 
+      - name: Setup R packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          upgrade: 'TRUE'
+
+      - name: Render practical and commit output
+        run: Rscript render.R
+      
+      - name: Commit any changes from macOS
+        if: ${{ matrix.config.os }} == 'macos'
+        run: |
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git commit * -m 'Rerender practical' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
