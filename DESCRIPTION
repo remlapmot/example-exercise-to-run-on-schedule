@@ -1,0 +1,12 @@
+Package: exercise
+Title: This is not really an R package. This file lists the
+    dependencies available from CRAN and GitHub for building the book.
+Version: 0.1
+Authors@R: 
+    person("Tom", "Palmer", , "remlapmot@hotmail.com", role = c("aut", "cre"))
+Depends: 
+    R (>= 3.5.0)
+Imports:
+    knitr,
+    quarto
+Encoding: UTF-8
