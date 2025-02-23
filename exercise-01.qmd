@@ -3,7 +3,7 @@ title: "`r params$title`"
 author: "Tom Palmer"
 format:
   html:
-    emed-resources: true
+    embed-resources: true
 params:
   solutions: true
   title: "Example exercise: Solutions"
