@@ -11,3 +11,4 @@ Imports:
     quarto,
     sessioninfo
 Encoding: UTF-8
+SystemRequirements: quarto (>= 1.6.0) - https://quarto.org/
