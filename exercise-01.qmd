@@ -1,6 +1,7 @@
 ---
 title: "`r params$title`"
 author: "Tom Palmer"
+date: "`r Sys.Date()`"
 format:
   html:
     embed-resources: true
