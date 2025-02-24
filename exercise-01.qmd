@@ -7,7 +7,7 @@ format:
     embed-resources: true
 params:
   solutions: true
-  title: "Example exercise: Solutions"
+  title: "Example Exercise: Solutions"
 engine: knitr
 format-links: false
 ---
