@@ -8,7 +8,6 @@ on:
 
 name: Render
 
-# you need these permissions to publish to GitHub pages
 permissions: 
   contents: write
 
