@@ -52,8 +52,8 @@ jobs:
           # Render solutions
           Rscript -e 'quarto::quarto_render("exercise-01.qmd", output_file = "exercise-01-solutions-${{ matrix.config.os }}.html")'
           # Commit output documents
-          git config --local user.name "$GITHUB_ACTOR"
-          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config --local user.name $GITHUB_ACTOR
+          git config --local user.email $GITHUB_ACTOR@users.noreply.github.com
           git pull
           git add "*.html"
           git commit * -m "Render practical on ${{ matrix.config.os }}" || echo 'No changes to commit'
