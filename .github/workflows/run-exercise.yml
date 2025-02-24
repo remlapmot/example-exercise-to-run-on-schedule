@@ -48,7 +48,7 @@ jobs:
         shell: bash
         run: |
           # Render questions
-          Rscript -e 'quarto::quarto_render("exercise-01.qmd", output_file = "exercise-01-questions-${{ matrix.config.os }}.html", execute_params = list(solutions = FALSE, title = "Example exercise: Questions"))'
+          Rscript -e 'quarto::quarto_render("exercise-01.qmd", output_file = "exercise-01-questions-${{ matrix.config.os }}.html", execute_params = list(solutions = FALSE, title = "Example Exercise: Questions"))'
           # Render solutions
           Rscript -e 'quarto::quarto_render("exercise-01.qmd", output_file = "exercise-01-solutions-${{ matrix.config.os }}.html")'
           # Commit output documents
